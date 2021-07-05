@@ -1,0 +1,128 @@
+{
+    "definitions": {},
+    "info": {
+      "title": "nodejs",
+      "version": "1.0.0",
+      "license": {
+        "name": "ISC"
+      },
+      "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3)."
+    },
+    "tags": [
+        {
+            "name": "users",
+            "description": "users actions routes"
+        }
+    ],
+    "paths": {
+      "/api/v1/users": {
+        "get": {
+          "summary": "/api/v1/users",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": ["users"]
+        },
+        "post": {
+          "summary": "/api/v1/users",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+                "name": "email",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "password",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "familyName",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "givenName",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "token",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "roles",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "domain",
+                "in": "body",
+                "required": true
+            },
+            {
+                "name": "companies_id",
+                "in": "body",
+                "required": false
+            }
+          ],
+          "responses": {},
+          "tags": ["users"]
+        }
+      },
+      "/api/v1/users/{id}": {
+        "get": {
+          "summary": "/api/v1/users/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": ["users"]
+        },
+        "put": {
+          "summary": "/api/v1/users/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": ["users"]
+        },
+        "delete": {
+          "summary": "/api/v1/users/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": ["users"]
+        }
+      }
+    },
+    "swagger": "2.0"
+  }
